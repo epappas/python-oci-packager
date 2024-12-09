@@ -42,7 +42,7 @@ async fn main() -> Result<()> {
         s => s,
     };
 
-    let builder = PythonImageBuilder::new(
+    let mut builder = PythonImageBuilder::new(
         PathBuf::from(cli.project_path),
         PathBuf::from(cli.output),
         base_image,
